@@ -1,6 +1,8 @@
 import styled from "styled-components";
+
 import Spinner from "../../ui/Spinner";
 import CabinRow from "./CabinRow";
+import Empty from "../../ui/Empty";
 import { useCabins } from "./useCabins";
 
 const Table = styled.div`
@@ -31,6 +33,8 @@ function CabinTable() {
   const { cabins, isLoading } = useCabins();
 
   if (isLoading) return <Spinner />;
+
+  if (!cabins.length) return <Empty resource="Cabins" />;
 
   return (
     <Table role="table">

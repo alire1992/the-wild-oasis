@@ -119,7 +119,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
         />
       </FormRow>
 
-      <FormRow label="Cabin photo">
+      <FormRow label="Cabin photo" errorMessage={errors?.image?.message}>
         <FileInput
           id="image"
           accept="image/*"
