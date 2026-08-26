@@ -45,7 +45,7 @@ function UpdateSettingsForm() {
           id="max-nights"
           defaultValue={maxBookingLentgh}
           disabled={isUpdating}
-          onBlur={(e) => handleUpdate(e, "maxBookingLentgh")}
+          onBlur={(e) => handleUpdate(e, "maxBookingLength")}
         />
       </FormRow>
       <FormRow label="Maximum guests/booking">
