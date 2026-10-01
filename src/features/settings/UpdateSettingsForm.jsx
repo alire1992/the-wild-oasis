@@ -10,7 +10,7 @@ function UpdateSettingsForm() {
     isLoading,
     settings: {
       minBookingLength,
-      maxBookingLentgh,
+      maxBookingLength,
       maxGuestsPerBooking,
       breakfastPrice,
     } = {},
@@ -43,7 +43,7 @@ function UpdateSettingsForm() {
         <Input
           type="number"
           id="max-nights"
-          defaultValue={maxBookingLentgh}
+          defaultValue={maxBookingLength}
           disabled={isUpdating}
           onBlur={(e) => handleUpdate(e, "maxBookingLength")}
         />

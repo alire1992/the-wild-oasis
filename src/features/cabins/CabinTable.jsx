@@ -14,6 +14,8 @@ function CabinTable() {
 
   if (isLoading) return <Spinner />;
 
+  if (!cabins.length) return <Empty resourceName="cabins" />;
+
   // 1) Filter
   const filterValue = searchParams.get("discount") || "all";
 
