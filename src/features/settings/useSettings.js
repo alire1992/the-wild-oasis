@@ -4,12 +4,12 @@ import { getSettings } from "../../services/apiSettings";
 export function useSettings() {
   const {
     data: settings,
-    isLoading,
+    isPending,
     error,
   } = useQuery({
     queryKey: ["settings"],
     queryFn: getSettings,
   });
 
-  return { settings, isLoading, error };
+  return { settings, isLoading: isPending, error };
 }
