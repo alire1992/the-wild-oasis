@@ -12,10 +12,11 @@ import AppLayput from "./ui/AppLayput";
 import Booking from "./pages/Booking";
 import Checkin from "./pages/Checkin";
 import ProtectedRoute from "./ui/ProtectedRoute";
+import DarkModeProvider from "./context/DarkModeToggle";
 
 function App() {
   return (
-    <>
+    <DarkModeProvider>
       <BrowserRouter>
         <Routes>
           <Route
@@ -61,7 +62,7 @@ function App() {
           },
         }}
       />
-    </>
+    </DarkModeProvider>
   );
 }
 
