@@ -17,6 +17,7 @@ import { useMoveBack } from "../../hooks/useMoveBack";
 import { useBooking } from "./useBooking";
 import { useCheckout } from "../check-in-out/useCheckout";
 import { useDeleteBooking } from "../check-in-out/useDeleteBooking";
+import Empty from "../../ui/Empty";
 
 const HeadingGroup = styled.div`
   display: flex;
@@ -41,6 +42,8 @@ function BookingDetail() {
   };
 
   if (isLoading) return <Spinner />;
+
+  if (!booking) return <Empty resourceName="booking" />;
 
   return (
     <>
